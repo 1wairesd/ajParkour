@@ -497,6 +497,7 @@ public class Scores {
 			Connection conn = getConnection();
 			ResultSet r = conn.createStatement().executeQuery("select name from "+ tablePrefix +"players where id='"+uuid.toString()+"'");
 			if(!r.next()) {
+				closeConn(conn, r);
 				return null;
 			}
 			String re = r.getString("name");

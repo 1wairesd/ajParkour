@@ -121,6 +121,7 @@ public class TopManager {
 
     public void clearPlayerCache(Player ply) {
         highScores.remove(ply);
+        lastGetHS.remove(ply);
     }
 
 
