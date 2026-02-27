@@ -7,3 +7,13 @@ ajParkour.iml
 build
 .gradle
 .DS_Store
+
+
+.classpath
+.project
+.factorypath
+.nosync
+bin/
+
+node_modules
+

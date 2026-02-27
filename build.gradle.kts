@@ -8,6 +8,7 @@ group = "us.ajg0702"
 version = "2.12.10"
 
 repositories {
+	maven { url = uri("https://repo.codemc.io/repository/maven-public/") }
   mavenCentral()
 
   maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
@@ -19,7 +20,7 @@ repositories {
 
 dependencies {
   compileOnly("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
-  compileOnly("me.clip:placeholderapi:2.10.4")
+  compileOnly("me.clip:placeholderapi:2.11.6")
   compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.0.1")
   compileOnly(files("libs/InfiniteJump.jar"))
 
