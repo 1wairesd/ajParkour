@@ -12,14 +12,15 @@ repositories {
 
   maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
   maven { url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/") }
-  maven { url = uri("https://repo.extendedclip.com/content/repositories/placeholderapi/") }
+  maven { url = uri("https://repo.extendedclip.com/releases/") }
+  maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
   maven { url = uri("https://maven.enginehub.org/repo/") }
   maven { url = uri("https://gitlab.com/api/v4/projects/19978391/packages/maven") }
 }
 
 dependencies {
   compileOnly("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
-  compileOnly("me.clip:placeholderapi:2.10.4")
+  compileOnly("me.clip:placeholderapi:2.11.5")
   compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.0.1")
   compileOnly(files("libs/InfiniteJump.jar"))
 
