@@ -8,6 +8,7 @@ group = "us.ajg0702"
 version = "2.12.11"
 
 repositories {
+	maven { url = uri("https://repo.codemc.io/repository/maven-public/") }
   mavenCentral()
 
   maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
@@ -20,7 +21,7 @@ repositories {
 
 dependencies {
   compileOnly("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
-  compileOnly("me.clip:placeholderapi:2.11.5")
+  compileOnly("me.clip:placeholderapi:2.11.6")
   compileOnly("com.sk89q.worldedit:worldedit-bukkit:7.0.1")
   compileOnly(files("libs/InfiniteJump.jar"))
 
@@ -41,6 +42,8 @@ tasks.withType<ProcessResources> {
 tasks.shadowJar {
     relocate("us.ajg0702.utils", "us.ajg0702.parkour.utils")
     relocate("com.zaxxer.hikari", "us.ajg0702.parkour.hikari")
+
+    exclude("org/slf4j/**")
 
     archiveClassifier.set("")
 }
